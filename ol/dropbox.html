@@ -8,6 +8,7 @@
     <link href="lib/bootstrap.css" rel="stylesheet" media="screen">
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
     <link href="common.css" rel="stylesheet" media="screen">
+    <link href="dropbox.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -38,11 +39,13 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Load files from Dropbox</h4>
+            <h4 class="modal-title">Load files</h4>
           </div>
           <div class="modal-body">
 	    <form>
-	      <input type="dropbox-chooser" id="db-chooser" data-multiselect="false" data-link-type="direct" style="visibility: hidden;"/>
+              <div id="vector-drop" class="dropzone">drop files here</div>
+	      <input type="dropbox-chooser" id="db-chooser" data-multiselect="true" data-link-type="direct" style="visibility: hidden;"/>
+              <div id="db-chooser-info" class="alert alert-info"></div>
 	    </form>
 	  </div>
 	</div>
