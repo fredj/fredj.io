@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ol template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+    <link href="lib/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="common.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="navbar navbar-top">
+        <button class="btn btn-primary navbar-btn collapsed" data-toggle="collapse" data-target="#wrapper"> <!-- FIXME: set active -->
+	  <i class="visible-collapsed icon-caret-right"></i>
+	  <i class="hidden-collapsed icon-caret-left"></i>
+	</button>
+
+        <form class="navbar-form pull-right">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#load-data-dialog"><i class="icon-reorder"></i></button>
+        </form>
+      </div>
+      <div class="map" id="map">
+        <div class="map-control ol-layers">
+          <!-- <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i></button> -->
+          <!-- <ul class="dropdown-menu pull-right"> -->
+          <!--   <li><a href="#" data-base-layer="standard"><i class="icon-check"> Standard</i></a></li> -->
+          <!--   <li><a href="#" data-base-layer="cycle"><i class="icon-check-empty"> Cycle Map</i></a></li> -->
+          <!--   <li><a href="#" data-base-layer="transport"><i class="icon-check-empty"> Transport Map</i></a></li> -->
+          <!--   <li><a href="#" data-base-layer="mapquest"><i class="icon-check-empty"> MapQuest Open</i></a></li> -->
+          <!-- </ul> -->
+        </div>
+        <button class="btn btn-primary map-control ol-location" data-ol-control="geolocation"><i class="icon-location-arrow"></i></button>
+        <div class="btn-group-vertical map-control ol-zoom">
+          <button class="btn btn-primary" data-ol-control="zoom-in"><i class="icon-plus"></i></button>
+          <button class="btn btn-primary" data-ol-control="zoom-out"><i class="icon-minus"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <button class="btn btn-primary" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseOne">
+              Collapsible Group Item #1
+            </button>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse in">
+            <div class="accordion-inner">
+              Anim pariatur cliche reprehenderit, enim eiusmod
+              high life accusamus terry richardson ad squid. 3
+              wolf moon officia aute, non cupidatat skateboard
+              dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+              put a bird on it squid single-origin coffee
+              nulla assumenda shoreditch et. Nihil anim
+              keffiyeh helvetica, craft beer labore wes
+              anderson cred nesciunt sapiente ea proident. Ad
+              vegan excepteur butcher vice lomo. Leggings
+              occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't
+              heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <button class="btn btn-primary" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseTwo">
+              Collapsible Group Item #2
+            </button>
+          </div>
+          <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+              Anim pariatur cliche reprehenderit, enim eiusmod
+              high life accusamus terry richardson ad squid. 3
+              wolf moon officia aute, non cupidatat skateboard
+              dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+              put a bird on it squid single-origin coffee
+              nulla assumenda shoreditch et. Nihil anim
+              keffiyeh helvetica, craft beer labore wes
+              anderson cred nesciunt sapiente ea proident. Ad
+              vegan excepteur butcher vice lomo. Leggings
+              occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't
+              heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <button class="btn btn-primary" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseThree">
+              Collapsible Group Item #3
+            </button>
+          </div>
+          <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner">
+              Anim pariatur cliche reprehenderit, enim eiusmod
+              high life accusamus terry richardson ad squid. 3
+              wolf moon officia aute, non cupidatat skateboard
+              dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+              put a bird on it squid single-origin coffee
+              nulla assumenda shoreditch et. Nihil anim
+              keffiyeh helvetica, craft beer labore wes
+              anderson cred nesciunt sapiente ea proident. Ad
+              vegan excepteur butcher vice lomo. Leggings
+              occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't
+              heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="list-group"> -->
+      <!--   <a href="#" class="list-group-item active"> -->
+      <!--     <h4 class="list-group-item-heading">List group item heading</h4> -->
+      <!--     <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> -->
+      <!--   </a> -->
+      <!--   <a href="#" class="list-group-item"> -->
+      <!--     <h4 class="list-group-item-heading">List group item heading</h4> -->
+      <!--     <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> -->
+      <!--   </a> -->
+      <!--   <a href="#" class="list-group-item"> -->
+      <!--     <h4 class="list-group-item-heading">List group item heading</h4> -->
+      <!--     <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p> -->
+      <!--   </a> -->
+      <!-- </div> -->
+    </div>
+
+    <div class="modal fade" id="load-data-dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>Modal body</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="35cpignvmcnskp9"></script>
+
+    <script src="lib/ol.js"></script>
+    <script src="lib/jquery-2.0.2.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="common.js"></script>
+  </body>
+</html>
