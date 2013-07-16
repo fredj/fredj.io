@@ -7,7 +7,7 @@ html, body {
     overflow: hidden;
 }
 
-.btn-list-vertical[data-toggle="buttons-radio"] > .btn > input[type="radio"] {
+.btn-list-vertical[data-toggle="buttons"] > .btn > input[type="radio"] {
     display: none;
 }
 
@@ -18,10 +18,10 @@ html, body {
     margin-bottom: 5px;
 }
 
-.collapsed .hidden-collapsed, .visible-collapsed {
+.in .visible-collapsed, .hidden-collapsed {
     display: none;
 }
-.collapsed .visible-collapsed {
+.in .hidden-collapsed {
     display: initial;
 }
 
@@ -32,6 +32,8 @@ html, body {
     z-index: 1000; /* FIXME */
     -webkit-transition: left 0.1s ease-in-out;
     transition: left 0.1s ease-in-out;
+    background-color: #fff;
+    background-image: url(wavegrid.png);
 }
 
 #wrapper.in {
@@ -68,7 +70,6 @@ html, body {
     width: 100%;
     top: 50px;
     bottom: 0;
-    background-image: url(wavegrid.png);
 }
 
 .map .map-control {
