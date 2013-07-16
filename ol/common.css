@@ -30,8 +30,8 @@ html, body {
     width: 100%;
     height: 100% !important;
     z-index: 1000; /* FIXME */
-    -webkit-transition: left 0.3s ease-in-out;
-    transition: left 0.3s ease-in-out;
+    -webkit-transition: left 0.1s ease-in-out;
+    transition: left 0.1s ease-in-out;
 }
 
 #wrapper.in {
@@ -46,7 +46,6 @@ html, body {
 .menu {
     height: 100%;
     width: 50%;
-    color: #ccc;
     background-color: #474949;
 }
 .menu .accordion-group {
@@ -85,7 +84,7 @@ html, body {
 .ol-location {
     left: 15px;
     bottom: 15px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .ol-rotation {
