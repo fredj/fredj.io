@@ -7,6 +7,18 @@ html, body {
     overflow: hidden;
 }
 
+.btn-dark {
+    color: #fff;
+    background-color: #474949;
+    border-color: #474949;
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active {
+    color: #fff;
+    background-color: #333434;
+    border-color: #292a2a;
+}
+
 .btn-list-vertical[data-toggle="buttons"] > .btn > input[type="radio"] {
     display: none;
 }
