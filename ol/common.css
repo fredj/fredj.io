@@ -3,6 +3,11 @@ html, body {
     overflow: hidden;
 }
 
+body {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .modal {
     overflow: hidden;
 }
