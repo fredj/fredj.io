@@ -20,6 +20,9 @@ var map = new ol.Map({
                     'GWS Linien,Nutzungszonen Linien,Abstandslinien',
           'FORMAT': 'image/png; mode=8bit'
         },
+        // otherwise the image is too big and iOS failed to display it (3MB limitation)
+        ratio: 1,
+        // adds the 'DPI' param
         serverType: 'qgis'
       })
     })
