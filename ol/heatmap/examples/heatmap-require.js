@@ -1,0 +1,9 @@
+goog.require('ol.Map');
+goog.require('ol.RendererHint');
+goog.require('ol.View2D');
+goog.require('ol.layer.Image');
+goog.require('ol.layer.Tile');
+goog.require('ol.source.ImageCanvas');
+goog.require('ol.source.KML');
+goog.require('ol.source.Stamen');
+goog.require('ol.source.State');
