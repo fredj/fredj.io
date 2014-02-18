@@ -6,6 +6,15 @@ var vector = new ol.layer.Heatmap({
   radius: 5
 });
 
+vector.getSource().on('addfeature', function(event) {
+  // 2012_Earthquakes_Mag5.kml stores the magnitude of each earthquake in a
+  // standards-violating <magnitude> tag in each Placemark.  We extract it from
+  // the Placemark's name instead.
+  var name = event.feature.get('name');
+  var magnitude = parseFloat(name.substr(2));
+  event.feature.set('weight', magnitude - 5);
+});
+
 var raster = new ol.layer.Tile({
   source: new ol.source.Stamen({
     layer: 'toner'
