@@ -67,6 +67,8 @@ $('#export').click(function() {
 // FIXME: custom format
 function toDataURL(map, size, callback) {
   var offlineMap = new ol.Map({
+    controls: [],
+    interactions: [],
     pixelRatio: 1,
     target: document.createElement('div')
   });
