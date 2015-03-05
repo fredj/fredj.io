@@ -1,0 +1,8 @@
+{
+  "name": "ol3-polymer",
+  "private": true,
+  "dependencies": {
+    "webcomponents.js": "~0.5.5",
+    "polymer": "~0.5.5"
+  }
+}
