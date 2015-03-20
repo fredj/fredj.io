@@ -1,5 +1,5 @@
 {
-  "name": "ol3-countries",
+  "name": "ol3-municipalities",
   "private": true,
   "dependencies": {
     "webcomponentsjs": "~0.5.5",
