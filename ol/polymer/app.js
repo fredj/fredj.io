@@ -26,7 +26,7 @@ var featureOverlay = new ol.FeatureOverlay({
   map: scope.map
 });
 scope.draw = new ol.interaction.Draw({
-  features: featureOverlay.getFeatures(),
+  features: featureOverlay.features,
   type: "LineString"
 });
 scope.draw.active = false;
