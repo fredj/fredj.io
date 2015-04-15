@@ -4,18 +4,13 @@ var map = new ol.Map({
       source: new ol.source.OSM()
     }),
     new ol.layer.Vector({
-      source: new ol.source.GeoJSON({
-        projection: 'EPSG:3857',
-        url: 'data/geojson/countries.geojson'
+      source: new ol.source.Vector({
+        url: 'data/geojson/countries.geojson',
+        format: new ol.format.GeoJSON()
       })
     })
   ],
   target: 'map',
-  controls: ol.control.defaults({
-    attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-      collapsible: false
-    })
-  }),
   view: new ol.View({
     center: [0, 0],
     zoom: 2
@@ -73,8 +68,8 @@ function toDataURL(map, size, callback) {
     target: document.createElement('div')
   });
   offlineMap.setSize(size);
-  offlineMap.bindTo('layergroup', map);
-  offlineMap.bindTo('view', map);
+  offlineMap.setLayerGroup(map.getLayerGroup());
+  offlineMap.setView(map.getView());
 
   offlineMap.once('postcompose', function(event) {
     callback(event.context.canvas.toDataURL('image/png'));
