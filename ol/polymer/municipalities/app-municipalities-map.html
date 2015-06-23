@@ -20,6 +20,7 @@
       map: null,
 
       ready: function() {
+        this.vectorSource_ = new ol.source.Vector();
         this.map = new ol.Map({
           controls: [],
           interactions: [],
@@ -27,23 +28,25 @@
           layers: [
             new ol.layer.Tile({
               source: new ol.source.OSM()
+            }),
+            new ol.layer.Vector({
+              source: this.vectorSource_
             })
           ]
-        });
-        this.featureOverlay_ = new ol.FeatureOverlay({
-          map: this.map
         });
       },
 
       featureChanged: function(oldValue, newValue) {
-        this.featureOverlay_.features = [this.feature];
-        this.recenterToFeature();
+        if (!!this.feature.geometry) {
+          this.vectorSource_.features = [this.feature];
+          this.recenterToFeature();
+        }
       },
 
       recenterToFeature: function() {
         var size = this.map.size;
-        if (size[0] && size[1] && this.feature && this.feature.geometry) {
-          this.map.view.fitExtent(this.feature.geometry.extent, this.map.size);
+        if (size[0] && size[1]) {
+          this.map.view.fitExtent(this.vectorSource_.extent, size);
         }
       },
 

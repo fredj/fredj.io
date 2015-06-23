@@ -1,5 +1,7 @@
 var scope = document.querySelector('#scope');
 
+var source = new ol.source.Vector();
+
 scope.map = new ol.Map({
   controls: [],
   layers: [
@@ -14,6 +16,9 @@ scope.map = new ol.Map({
       source: new ol.source.Stamen({
         layer: 'watercolor'
       })
+    }),
+    new ol.layer.Vector({
+      source: source
     })
   ],
   view: new ol.View({
@@ -22,11 +27,9 @@ scope.map = new ol.Map({
     rotation: Math.PI / 3
   })
 });
-var featureOverlay = new ol.FeatureOverlay({
-  map: scope.map
-});
+
 scope.draw = new ol.interaction.Draw({
-  features: featureOverlay.features,
+  source: source,
   type: "LineString"
 });
 scope.draw.active = false;
