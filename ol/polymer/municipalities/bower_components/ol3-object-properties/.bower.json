@@ -1,0 +1,19 @@
+{
+  "name": "ol3-object-properties",
+  "homepage": "https://github.com/fredj/ol3-object-properties",
+  "authors": [
+    "Frederic Junod <frederic.junod@gmail.com>"
+  ],
+  "main": "dist/ol3-properties.min.js",
+  "license": "WTFPL",
+  "ignore": [],
+  "_release": "e02a93fe47",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e02a93fe4746bd65fc8fca7e6a8da0b64ebda778"
+  },
+  "_source": "git://github.com/fredj/ol3-object-properties.git",
+  "_target": "*",
+  "_originalSource": "fredj/ol3-object-properties"
+}

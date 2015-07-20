@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "webcomponentsjs": "~0.5.5",
+    "ol3-object-properties": "fredj/ol3-object-properties",
     "core-list": "Polymer/core-list#~0.5.5",
     "jquery": "~2.1.3"
   }
