@@ -43,14 +43,14 @@ var layers = {};
 layers['bng'] = new ol.layer.Tile({
   source: new ol.source.XYZ({
     projection: 'EPSG:27700',
-    url: 'http://tileserver.maptiler.com/miniscale/{z}/{x}/{y}.png',
+    url: 'https://tileserver.maptiler.com/miniscale/{z}/{x}/{y}.png',
     crossOrigin: '',
     maxZoom: 6
   })
 });
 
-layers['mapquest'] = new ol.layer.Tile({
-  source: new ol.source.MapQuest({layer: 'osm'})
+layers['osm'] = new ol.layer.Tile({
+  source: new ol.source.OSM()
 });
 
 layers['wms4326'] = new ol.layer.Tile({
@@ -97,7 +97,7 @@ fetch(url).then(function(response) {
 
 layers['grandcanyon'] = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    url: 'http://tileserver.maptiler.com/grandcanyon@2x/{z}/{x}/{y}.png',
+    url: 'https://tileserver.maptiler.com/grandcanyon@2x/{z}/{x}/{y}.png',
     crossOrigin: '',
     tilePixelRatio: 2,
     maxZoom: 15,
@@ -131,7 +131,7 @@ layers['states'] = new ol.layer.Tile({
 
 var map = new ol.Map({
   layers: [
-    layers['mapquest'],
+    layers['osm'],
     layers['bng']
   ],
   renderer: common.getRendererFromQueryString(),
