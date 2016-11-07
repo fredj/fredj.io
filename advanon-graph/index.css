@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#instructions {
+    padding: 10% 20%;
+    border: 2px dashed #d5d8dc;
+    text-align: center;
+}
+
+#investments-grid {
+    max-width: 960px;
+}
+.vaadin-grid-row.vaadin-grid:after {
+    height: 0 !important;
+}
+
+#investments-grid {
+    display: none;
+}
+#investments-graph {
+    display: none;
+}
+
+.has-data #investments-grid {
+    display: block;
+}
+.has-data #investments-graph {
+    display: block;
+}
+.has-data #instructions {
+    display: none;
+}

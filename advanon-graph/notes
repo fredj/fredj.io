@@ -1,0 +1,10 @@
+var roiByMonth = d3.nest()
+  .key(function(d) { return d.repayment_date.getMonth(); })
+  .rollup(function(v) { return d3.sum(v, function(d) { return d.roi; }); })
+  .entries(data);
+
+var roiByCompany = d3.nest()
+  .key(function(d) { return d.company; })
+  .rollup(function(v) { return d3.sum(v, function(d) { return d.roi; }); })
+  .entries(data);
+

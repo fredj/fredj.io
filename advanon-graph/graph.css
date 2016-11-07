@@ -1,0 +1,9 @@
+.cumulative-line {
+  stroke-width: 2px;
+  stroke: rgba(70, 130, 180, 0.025);
+  fill: none;
+}
+
+.cumulative-line.selected {
+  stroke: rgba(70, 130, 180, 1.0);
+}

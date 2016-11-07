@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="graph.css">
+
+    <script src="https://cdn.vaadin.com/vaadin-core-elements/latest/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="https://cdn.vaadin.com/vaadin-core-elements/latest/vaadin-grid/vaadin-grid.html">
+
+    <style is="custom-style">
+      vaadin-grid {
+        --vaadin-grid-row-height: 30px;
+        --vaadin-grid-header-row-height: 30px;
+        --vaadin-grid-selected-row-cell: {
+          background-color: rgba(70, 130, 180, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p id="instructions">
+      Download a CSV report of the past investments and drop the file into this page.
+    </p>
+
+    <div id="investments-graph"></div>
+    <vaadin-grid id="investments-grid">
+      <table>
+        <colgroup>
+          <col name="company"/>
+          <col name="investment_date"/>
+          <col name="repayment_date"/>
+          <col name="duration"/>
+          <col name="roi"/>
+        </colgroup>
+      </table>
+    </vaadin-grid>
+
+    <script src="graph.js"></script>
+    <script src="drop.js"></script>
+  </body>
+</html>
