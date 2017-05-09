@@ -1,6 +1,6 @@
 // OpenLayers. See https://openlayers.org/
 // License: https://raw.githubusercontent.com/openlayers/openlayers/master/LICENSE.md
-// Version: v4.1.1-75-g7b719cd
+// Version: v4.1.1-75-gfb12a37
 ;(function (root, factory) {
   if (typeof exports === "object") {
     module.exports = factory();
@@ -12856,8 +12856,8 @@ ol.MapBrowserEventHandler.prototype.relayEvent_ = function(pointerEvent) {
  * @private
  */
 ol.MapBrowserEventHandler.prototype.isMoving_ = function(pointerEvent) {
-  return Math.abs(pointerEvent.clientX - this.down_.clientX) > 0.75 ||
-      Math.abs(pointerEvent.clientY - this.down_.clientY) > 0.75;
+  return Math.abs(pointerEvent.clientX - this.down_.clientX) > 1 ||
+      Math.abs(pointerEvent.clientY - this.down_.clientY) > 1;
 };
 
 
@@ -91893,7 +91893,7 @@ goog.exportProperty(
     ol.control.ZoomToExtent.prototype,
     'un',
     ol.control.ZoomToExtent.prototype.un);
-ol.VERSION = 'v4.1.1-75-g7b719cd';
+ol.VERSION = 'v4.1.1-75-gfb12a37';
 OPENLAYERS.ol = ol;
 
   return OPENLAYERS.ol;
