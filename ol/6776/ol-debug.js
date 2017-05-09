@@ -1,6 +1,6 @@
 // OpenLayers. See https://openlayers.org/
 // License: https://raw.githubusercontent.com/openlayers/openlayers/master/LICENSE.md
-// Version: v4.1.1-70-g020a8da
+// Version: v4.1.1-71-g7895301
 ;(function (root, factory) {
   if (typeof exports === "object") {
     module.exports = factory();
@@ -12818,11 +12818,9 @@ ol.MapBrowserEventHandler.prototype.handlePointerDown_ = function(pointerEvent) 
  * @private
  */
 ol.MapBrowserEventHandler.prototype.handlePointerMove_ = function(pointerEvent) {
-  // Fix IE10 on windows Surface : When you tap the tablet, it triggers
-  // multiple pointermove events between pointerdown and pointerup with
-  // the exact same coordinates of the pointerdown event. To avoid a
-  // 'false' touchmove event to be dispatched , we test if the pointer
-  // effectively moved.
+  // Between pointerdown and pointerup, pointermove events are triggered.
+  // To avoid a 'false' touchmove event to be dispatched, we test if the pointer
+  // moved a significant distance.
   if (this.isMoving_(pointerEvent)) {
     this.dragging_ = true;
     var newEvent = new ol.MapBrowserPointerEvent(
@@ -12859,7 +12857,7 @@ ol.MapBrowserEventHandler.prototype.relayEvent_ = function(pointerEvent) {
  */
 ol.MapBrowserEventHandler.prototype.isMoving_ = function(pointerEvent) {
   return Math.abs(pointerEvent.clientX - this.down_.clientX) > 1 ||
-      Math.abs(pointerEvent.clientY != this.down_.clientY) > 1;
+      Math.abs(pointerEvent.clientY - this.down_.clientY) > 1;
 };
 
 
@@ -91877,7 +91875,7 @@ goog.exportProperty(
     ol.control.ZoomToExtent.prototype,
     'un',
     ol.control.ZoomToExtent.prototype.un);
-ol.VERSION = 'v4.1.1-70-g020a8da';
+ol.VERSION = 'v4.1.1-71-g7895301';
 OPENLAYERS.ol = ol;
 
   return OPENLAYERS.ol;
