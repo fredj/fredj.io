@@ -1,6 +1,6 @@
 // OpenLayers. See https://openlayers.org/
 // License: https://raw.githubusercontent.com/openlayers/openlayers/master/LICENSE.md
-// Version: v4.1.1-75-gfb12a37
+// Version: v4.1.1-75-g9074850
 ;(function (root, factory) {
   if (typeof exports === "object") {
     module.exports = factory();
@@ -10209,111 +10209,6 @@ ol.MapBrowserEvent.prototype.stopPropagation = function() {
   this.originalEvent.stopPropagation();
 };
 
-goog.provide('ol.MapBrowserEventType');
-
-goog.require('ol.events.EventType');
-
-
-/**
- * Constants for event names.
- * @enum {string}
- */
-ol.MapBrowserEventType = {
-
-  /**
-   * A true single click with no dragging and no double click. Note that this
-   * event is delayed by 250 ms to ensure that it is not a double click.
-   * @event ol.MapBrowserEvent#singleclick
-   * @api
-   */
-  SINGLECLICK: 'singleclick',
-
-  /**
-   * A click with no dragging. A double click will fire two of this.
-   * @event ol.MapBrowserEvent#click
-   * @api
-   */
-  CLICK: ol.events.EventType.CLICK,
-
-  /**
-   * A true double click, with no dragging.
-   * @event ol.MapBrowserEvent#dblclick
-   * @api
-   */
-  DBLCLICK: ol.events.EventType.DBLCLICK,
-
-  /**
-   * Triggered when a pointer is dragged.
-   * @event ol.MapBrowserEvent#pointerdrag
-   * @api
-   */
-  POINTERDRAG: 'pointerdrag',
-
-  /**
-   * Triggered when a pointer is moved. Note that on touch devices this is
-   * triggered when the map is panned, so is not the same as mousemove.
-   * @event ol.MapBrowserEvent#pointermove
-   * @api
-   */
-  POINTERMOVE: 'pointermove',
-
-  POINTERDOWN: 'pointerdown',
-  POINTERUP: 'pointerup',
-  POINTEROVER: 'pointerover',
-  POINTEROUT: 'pointerout',
-  POINTERENTER: 'pointerenter',
-  POINTERLEAVE: 'pointerleave',
-  POINTERCANCEL: 'pointercancel'
-};
-
-goog.provide('ol.MapBrowserPointerEvent');
-
-goog.require('ol');
-goog.require('ol.MapBrowserEvent');
-
-
-/**
- * @constructor
- * @extends {ol.MapBrowserEvent}
- * @param {string} type Event type.
- * @param {ol.Map} map Map.
- * @param {ol.pointer.PointerEvent} pointerEvent Pointer event.
- * @param {boolean=} opt_dragging Is the map currently being dragged?
- * @param {?olx.FrameState=} opt_frameState Frame state.
- */
-ol.MapBrowserPointerEvent = function(type, map, pointerEvent, opt_dragging,
-    opt_frameState) {
-
-  ol.MapBrowserEvent.call(this, type, map, pointerEvent.originalEvent, opt_dragging,
-      opt_frameState);
-
-  /**
-   * @const
-   * @type {ol.pointer.PointerEvent}
-   */
-  this.pointerEvent = pointerEvent;
-
-};
-ol.inherits(ol.MapBrowserPointerEvent, ol.MapBrowserEvent);
-
-goog.provide('ol.pointer.EventType');
-
-
-/**
- * Constants for event names.
- * @enum {string}
- */
-ol.pointer.EventType = {
-  POINTERMOVE: 'pointermove',
-  POINTERDOWN: 'pointerdown',
-  POINTERUP: 'pointerup',
-  POINTEROVER: 'pointerover',
-  POINTEROUT: 'pointerout',
-  POINTERENTER: 'pointerenter',
-  POINTERLEAVE: 'pointerleave',
-  POINTERCANCEL: 'pointercancel'
-};
-
 goog.provide('ol.webgl');
 
 goog.require('ol');
@@ -10771,6 +10666,111 @@ ol.has.WEBGL;
     ol.WEBGL_MAX_TEXTURE_SIZE = textureSize;
   }
 })();
+
+goog.provide('ol.MapBrowserEventType');
+
+goog.require('ol.events.EventType');
+
+
+/**
+ * Constants for event names.
+ * @enum {string}
+ */
+ol.MapBrowserEventType = {
+
+  /**
+   * A true single click with no dragging and no double click. Note that this
+   * event is delayed by 250 ms to ensure that it is not a double click.
+   * @event ol.MapBrowserEvent#singleclick
+   * @api
+   */
+  SINGLECLICK: 'singleclick',
+
+  /**
+   * A click with no dragging. A double click will fire two of this.
+   * @event ol.MapBrowserEvent#click
+   * @api
+   */
+  CLICK: ol.events.EventType.CLICK,
+
+  /**
+   * A true double click, with no dragging.
+   * @event ol.MapBrowserEvent#dblclick
+   * @api
+   */
+  DBLCLICK: ol.events.EventType.DBLCLICK,
+
+  /**
+   * Triggered when a pointer is dragged.
+   * @event ol.MapBrowserEvent#pointerdrag
+   * @api
+   */
+  POINTERDRAG: 'pointerdrag',
+
+  /**
+   * Triggered when a pointer is moved. Note that on touch devices this is
+   * triggered when the map is panned, so is not the same as mousemove.
+   * @event ol.MapBrowserEvent#pointermove
+   * @api
+   */
+  POINTERMOVE: 'pointermove',
+
+  POINTERDOWN: 'pointerdown',
+  POINTERUP: 'pointerup',
+  POINTEROVER: 'pointerover',
+  POINTEROUT: 'pointerout',
+  POINTERENTER: 'pointerenter',
+  POINTERLEAVE: 'pointerleave',
+  POINTERCANCEL: 'pointercancel'
+};
+
+goog.provide('ol.MapBrowserPointerEvent');
+
+goog.require('ol');
+goog.require('ol.MapBrowserEvent');
+
+
+/**
+ * @constructor
+ * @extends {ol.MapBrowserEvent}
+ * @param {string} type Event type.
+ * @param {ol.Map} map Map.
+ * @param {ol.pointer.PointerEvent} pointerEvent Pointer event.
+ * @param {boolean=} opt_dragging Is the map currently being dragged?
+ * @param {?olx.FrameState=} opt_frameState Frame state.
+ */
+ol.MapBrowserPointerEvent = function(type, map, pointerEvent, opt_dragging,
+    opt_frameState) {
+
+  ol.MapBrowserEvent.call(this, type, map, pointerEvent.originalEvent, opt_dragging,
+      opt_frameState);
+
+  /**
+   * @const
+   * @type {ol.pointer.PointerEvent}
+   */
+  this.pointerEvent = pointerEvent;
+
+};
+ol.inherits(ol.MapBrowserPointerEvent, ol.MapBrowserEvent);
+
+goog.provide('ol.pointer.EventType');
+
+
+/**
+ * Constants for event names.
+ * @enum {string}
+ */
+ol.pointer.EventType = {
+  POINTERMOVE: 'pointermove',
+  POINTERDOWN: 'pointerdown',
+  POINTERUP: 'pointerup',
+  POINTEROVER: 'pointerover',
+  POINTEROUT: 'pointerout',
+  POINTERENTER: 'pointerenter',
+  POINTERLEAVE: 'pointerleave',
+  POINTERCANCEL: 'pointercancel'
+};
 
 goog.provide('ol.pointer.EventSource');
 
@@ -12578,6 +12578,7 @@ ol.pointer.PointerEventHandler.CLONE_PROPS = [
 goog.provide('ol.MapBrowserEventHandler');
 
 goog.require('ol');
+goog.require('ol.has');
 goog.require('ol.MapBrowserEventType');
 goog.require('ol.MapBrowserPointerEvent');
 goog.require('ol.events');
@@ -12619,6 +12620,12 @@ ol.MapBrowserEventHandler = function(map) {
    * @private
    */
   this.dragListenerKeys_ = [];
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.moveTolerance_ = 1 * ol.has.DEVICE_PIXEL_RATIO;
 
   /**
    * The most recent "down" type event (or null if none have occurred).
@@ -12856,8 +12863,10 @@ ol.MapBrowserEventHandler.prototype.relayEvent_ = function(pointerEvent) {
  * @private
  */
 ol.MapBrowserEventHandler.prototype.isMoving_ = function(pointerEvent) {
-  return Math.abs(pointerEvent.clientX - this.down_.clientX) > 1 ||
-      Math.abs(pointerEvent.clientY - this.down_.clientY) > 1;
+  console.log('x:', Math.abs(pointerEvent.clientX - this.down_.clientX),
+              'y:', Math.abs(pointerEvent.clientY - this.down_.clientY));
+  return Math.abs(pointerEvent.clientX - this.down_.clientX) > this.moveTolerance_ ||
+      Math.abs(pointerEvent.clientY - this.down_.clientY) > this.moveTolerance_;
 };
 
 
@@ -91893,7 +91902,7 @@ goog.exportProperty(
     ol.control.ZoomToExtent.prototype,
     'un',
     ol.control.ZoomToExtent.prototype.un);
-ol.VERSION = 'v4.1.1-75-gfb12a37';
+ol.VERSION = 'v4.1.1-75-g9074850';
 OPENLAYERS.ol = ol;
 
   return OPENLAYERS.ol;
