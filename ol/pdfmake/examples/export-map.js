@@ -53,7 +53,8 @@ var pdfConfig = {
 $('#export').click(function() {
   toDataURL(map, [800, 480], function(data) {
     pdfImageConfig.image = data;
-    pdfMake.createPdf(pdfConfig).download('ol-map.pdf');
+    var config = Object.assign({}, pdfConfig);
+    pdfMake.createPdf(config).download('ol-map.pdf');
   });
 });
 
