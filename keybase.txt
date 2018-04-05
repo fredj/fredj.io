@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/fredj
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://fredj.io
+  * I am fredj (https://keybase.io/fredj) on keybase.
+  * I have a public key ASCVtZcshhSwBvZcS7fuOpQmCjBQrq8zg_efuop5LuswMQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012095b5972c8614b006f65c4bb7ee3a94260a3050aeaf3383f79fba8a792eeb30310a",
+      "host": "keybase.io",
+      "kid": "012095b5972c8614b006f65c4bb7ee3a94260a3050aeaf3383f79fba8a792eeb30310a",
+      "uid": "1f993a104ac0883aaee74eaa28ebfc19",
+      "username": "fredj"
+    },
+    "merkle_root": {
+      "ctime": 1522915169,
+      "hash": "0607ca94295daa715b42d1e996926c1a22ed572a2bdd9bf0687c61c3a3d6c109e876ab8c829c37c68f9c52944b25cfeaabe844a4665e3a874368d7bbdd0fa325",
+      "hash_meta": "5586c458ed2d8c77d49c02b684a5d20b0e7d0aef03b70629d1aa39faffccd072",
+      "seqno": 2339253
+    },
+    "service": {
+      "entropy": "znKaInXl7o2ngR7uVR7JSZQ0",
+      "hostname": "fredj.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.47"
+  },
+  "ctime": 1522915186,
+  "expire_in": 504576000,
+  "prev": "1bf5729a2ffada57be9eba9959b12afbad2216ed7afc0c0aeab36a7c592d46d2",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglbWXLIYUsAb2XEu37jqUJgowUK6vM4P3n7qKeS7rMDEKp3BheWxvYWTESpcCDMQgG/Vymi/62le+nrqZWbEq+60iFu16/AwK6rNqfFktRtLEIMN3AiiBhcXMFT9LPgGKGWZy9LLqEdNfyvLkcJsrxKbfAgHCo3NpZ8RAdW5kNvkHBVTtEMHb/oHZTc6kjk65V2EHXxXrtC9kD+R8rDuGAiTbryUcMMrwmrmRhoeWSgyVLVZGJvzPFP1FAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPLaE3LD1npshxud2E9NL8prBBbpaRC/113KVl3wjiYco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fredj
+
+==================================================================
